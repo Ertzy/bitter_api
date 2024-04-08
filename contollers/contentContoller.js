@@ -7,7 +7,7 @@ const getContent = async (req, res) =>{
 
 const downs = async (req, res) =>{
     const {title, content} = req.body
-    const make = await visualScreen.create({title, content})
+    const make = await visualScreen.create({title, value: content})
     console.log(req.body)
     res.status(200).send(make)
 
